@@ -13,12 +13,14 @@ function Info({ stocks }) {
             </tr>
           </thead>
           <tbody>
-            {stocks.map((stock) => (
+
+            {stocks ? stocks.map((stock) => (
               <tr>
                 <td>{stock.sku}</td>
                 <td>{stock.total}</td>
               </tr>
-            ))}
+            )):
+            null}
           </tbody>
         </Table>
     </div>

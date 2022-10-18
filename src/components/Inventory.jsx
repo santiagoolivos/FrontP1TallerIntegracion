@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table';
 function Info({ stocks }) {
   return (
     <div>
-      <h3>Inventario</h3>
+      <h3>Inventario:</h3>
         <Table striped bordered hover>
           <thead>
             <tr>

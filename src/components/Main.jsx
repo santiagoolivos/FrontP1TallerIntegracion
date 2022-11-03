@@ -35,9 +35,9 @@ function Main() {
 
   return (
     <Container>
+      
       <Row>
-        <h2>Grupo 7</h2> 
-        <p>Dashboard</p>
+        <h1>Dashboard Bodegas y Stocks </h1>
       </Row>
       <Row>
         <Col>

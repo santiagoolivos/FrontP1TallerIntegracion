@@ -4,7 +4,7 @@ import Table from 'react-bootstrap/Table';
 import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import {roundTo, roundToUp, roundToDown} from 'round-to';
 
 const orders = [
   {
@@ -189,7 +189,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Aceptada',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -198,7 +198,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Aceptada',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -207,7 +207,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Aceptada',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -216,7 +216,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Pendiente',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -225,7 +225,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Pendiente',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -234,7 +234,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Pendiente',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -243,7 +243,7 @@ const orders = [
   },
   {
     id: 3,
-    estado: 'Finalizada',
+    estado: 'Pendiente',
     fechaEntrega: '2021-05-01',
     cliente: 'Juan Perez',
     urlNotification: 'Coca Cola',
@@ -280,7 +280,7 @@ function Orders() {
       <h2 class="text-center margin1">Ordenes</h2>
       <Row>
         <Col>
-        <h3>Resumen Ordenes:</h3>
+        <h3>Estadísticas Ordenes:</h3>
         </Col>
         <Col>
         <button type="button" class="btn btn-dark" onClick={countOrders}>Recalcular</button>
@@ -288,9 +288,10 @@ function Orders() {
       </Row>
       <Table striped bordered hover variant="dark" >
           <thead>
-            <tr>
+            <tr >
               <th>Estado Orden</th>
               <th>Cantidad Ordenes</th>
+              <th>Porcentaje aprox</th>
             </tr>
           </thead>
           <tbody>
@@ -299,14 +300,18 @@ function Orders() {
             <tr>
               <td>Pendientes</td>
               <td>{pendientes}</td>
+              <td>{roundTo(pendientes/orders.length*100, 2)}%</td>
+
             </tr>
             <tr>
               <td>Aceptadas</td>
               <td>{aceptadas}</td>
+              <td>{roundTo(aceptadas/orders.length*100, 2)}%</td>
             </tr>
             <tr>
               <td>Finalizadas</td>
               <td>{finalizadas}</td>
+              <td>{roundTo(finalizadas/orders.length*100, 2)}%</td>
             </tr>           
           </tbody>
         </Table>

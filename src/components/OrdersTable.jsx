@@ -8,7 +8,7 @@ function OrdersTable({orders}) {
     <div>
       <h3>Total Ordenes:</h3>
       <div class="table-wrapper-scroll-y my-custom-scrollbar">
-        <Table variant="dark" striped bordered hover responsive >
+        <Table variant="dark" striped bordered hover >
           <thead>
             <tr>
               <th>#</th>
@@ -21,7 +21,7 @@ function OrdersTable({orders}) {
               <th>Sku</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody >
 
             {orders ? orders.map((order) => (
               <tr>

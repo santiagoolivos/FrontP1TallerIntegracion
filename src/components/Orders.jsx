@@ -7,278 +7,41 @@ import Col from 'react-bootstrap/Col';
 import {roundTo, roundToUp, roundToDown} from 'round-to';
 import {getOrders} from '../requests/getOrders';
 
-const orders = [
-  {
-    id: 1,
-    estado: 'Pendiente',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 2,
-    estado: 'Aceptada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Finalizada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Aceptada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Aceptada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Aceptada',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Pendiente',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Pendiente',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Pendiente',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  },
-  {
-    id: 3,
-    estado: 'Pendiente',
-    fechaEntrega: '2021-05-01',
-    cliente: 'Juan Perez',
-    urlNotification: 'Coca Cola',
-    cantidad: 10,
-    sku: 'Coca Cola' 
-  }
-]
+
 function Orders() {
-  const [orders1, setOrders] = useState([]);
-  const [pendientes, setPendientes] = useState(0);
+  const [orders, setOrders] = useState([]);
   const [aceptadas, setAceptadas] = useState(0);
-  const [finalizadas, setFinalizadas] = useState(0);
+  const [recibidas, setRecibidas] = useState(0);
+  const [rechazadas, setRechazadas] = useState(0);
+  const [completadas, setCompletadas] = useState(0);
 
   const countOrders = () => {
-    let pendientes1 = 0;
-    let aceptadas1 = 0;
-    let finalizadas1 = 0;
-    const setStock = async () => {
-      const stocks = await getOrders();
-      console.log(stocks);
+    let recibidas_cant = 0;
+    let aceptadas_cant = 0;
+    let rechazadas_cant = 0;
+    let completadas_cant = 0;
+    const setInitialOrders = async () => {
+      const ord = await getOrders();
+      console.log(ord);
+      setOrders(ord)
+      // setOrders(await getOrders())
     }
-    setStock()
+    setInitialOrders()
     orders.forEach(order => {
-      if(order.estado === 'Pendiente') {
-        pendientes1++;
-      } else if(order.estado === 'Aceptada') {
-        aceptadas1++;
-      } else {
-        finalizadas1++;
+      if(order.estado === 'recibida') {
+        recibidas_cant++;
+      } else if(order.estado === 'aceptada') {
+        aceptadas_cant++;
+      } else if(order.estado === 'rechazada') {
+        rechazadas_cant++;
+      } else if(order.estado === 'completada') {
+        completadas_cant++;
       }
     });
-    setPendientes(pendientes1);
-    setAceptadas(aceptadas1);
-    setFinalizadas(finalizadas1);
+    setRecibidas(recibidas_cant);
+    setAceptadas(aceptadas_cant);
+    setRechazadas(rechazadas_cant);
+    setCompletadas(completadas_cant)
   }
 
   return (
@@ -304,9 +67,9 @@ function Orders() {
 
            
             <tr>
-              <td>Pendientes</td>
-              <td>{pendientes}</td>
-              <td>{roundTo(pendientes/orders.length*100, 2)}%</td>
+              <td>Recibidas</td>
+              <td>{recibidas}</td>
+              <td>{roundTo(recibidas/orders.length*100, 2)}%</td>
 
             </tr>
             <tr>
@@ -315,9 +78,14 @@ function Orders() {
               <td>{roundTo(aceptadas/orders.length*100, 2)}%</td>
             </tr>
             <tr>
-              <td>Finalizadas</td>
-              <td>{finalizadas}</td>
-              <td>{roundTo(finalizadas/orders.length*100, 2)}%</td>
+              <td>Rechazadas</td>
+              <td>{rechazadas}</td>
+              <td>{roundTo(rechazadas/orders.length*100, 2)}%</td>
+            </tr> 
+            <tr>
+              <td>Completadas</td>
+              <td>{rechazadas}</td>
+              <td>{roundTo(completadas/orders.length*100, 2)}%</td>
             </tr>           
           </tbody>
         </Table>

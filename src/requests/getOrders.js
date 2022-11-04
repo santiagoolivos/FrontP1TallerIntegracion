@@ -2,12 +2,8 @@ import axios from 'axios';
 import { API_URL } from './apiURL';
 
 export const getOrders = async () => {
-  const response = await axios.get(`https://101f-190-215-234-155.sa.ngrok.io/ordenes`)
-    .then((response) => {
-      console.log("HOLAAA")
-      console.log(response)
-      return response;
-    })
+  const response = await axios.get(`${API_URL}/ordenes`)
+    .then((response) =>  response.data)
     .catch((error) => {
       console.log(error);
     });

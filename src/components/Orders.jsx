@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {roundTo, roundToUp, roundToDown} from 'round-to';
+import {getOrders} from '../requests/getOrders';
 
 const orders = [
   {
@@ -261,6 +262,11 @@ function Orders() {
     let pendientes1 = 0;
     let aceptadas1 = 0;
     let finalizadas1 = 0;
+    const setStock = async () => {
+      const stocks = await getOrders();
+      console.log(stocks);
+    }
+    setStock()
     orders.forEach(order => {
       if(order.estado === 'Pendiente') {
         pendientes1++;

@@ -84,7 +84,7 @@ function Orders() {
             </tr> 
             <tr>
               <td>Completadas</td>
-              <td>{rechazadas}</td>
+              <td>{completadas}</td>
               <td>{roundTo(completadas/orders.length*100, 2)}%</td>
             </tr>           
           </tbody>

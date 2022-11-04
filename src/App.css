@@ -57,3 +57,10 @@
   width: 90%;
   height: 90%;
 }
+
+.margin1 {
+  margin: 20px;
+}
+.tabl1{
+  overflow: auto;
+}

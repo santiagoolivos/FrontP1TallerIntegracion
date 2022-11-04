@@ -35,16 +35,16 @@ function Main() {
 
   return (
     <Container>
-      
+        <h2 class="text-center margin1">Bodegas y Stocks </h2>
       <Row>
-        <h1>Dashboard Bodegas y Stocks </h1>
-      </Row>
-      <Row>
+        
         <Col>
         {space
           ? <h3>Inventario normal: {space.usedSpace}/{space.totalSpace} ({(space.usedSpace/space.totalSpace).toFixed(2) * 100}%)</h3>
           : <h3>Inventario normal: 0/0 (0%)</h3>
         }
+        </Col>
+        <Col>
         {
           pspace
           ? <h3>Inventario pulmón: {pspace.usedSpace}/{pspace.totalSpace} ({(pspace.usedSpace/pspace.totalSpace).toFixed(2) * 100}%)</h3>
@@ -53,7 +53,7 @@ function Main() {
         </Col>
       </Row>
       <Row>
-        <Col sm={6}>
+        <Col >
           <InventoryTable stocks={stocks} />
         </Col>
       </Row>

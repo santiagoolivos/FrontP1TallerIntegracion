@@ -5,6 +5,7 @@ function Info({ stocks }) {
   return (
     <div>
       <h3>Inventario:</h3>
+      <div class="table-wrapper-scroll-y my-custom-scrollbar">
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>
@@ -23,6 +24,7 @@ function Info({ stocks }) {
             null}
           </tbody>
         </Table>
+      </div>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import InventoryTable from './Inventory';
 import { getStocks } from '../requests/getStocks';
 import { getSpace } from '../requests/getSpace';
 
-function Main() {
+function Stocks() {
   const [stocks, setStocks] = useState([]);
   const [space, setSpace] = useState({});
   const [pspace, setPSpace] = useState({});
@@ -61,4 +61,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Stocks;

@@ -283,7 +283,7 @@ function Orders() {
         <h3>Resumen Ordenes:</h3>
         </Col>
         <Col>
-        <button type="button" class="btn btn-dark" onClick={countOrders}>Recalcular resumen</button>
+        <button type="button" class="btn btn-dark" onClick={countOrders}>Recalcular</button>
         </Col>
       </Row>
       <Table striped bordered hover variant="dark" >

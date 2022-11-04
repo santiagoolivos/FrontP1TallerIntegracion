@@ -7,11 +7,12 @@ import NavbarFrontend from './components/NavbarFrontend';
 
 function App() {
   return (
-    
-    <Router>
+    <div class="bg-light">
+    <Router >
       <NavbarFrontend/>
       <Routes />
     </Router>
+    </div>
   );
 }
 

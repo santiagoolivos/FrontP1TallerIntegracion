@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from '../components/Main';
+import Stocks from '../components/Stocks';
 
 export default function Home() {
   return (
     <div>
-        <Main />
+        <Stocks />
     </div>
   );
 }

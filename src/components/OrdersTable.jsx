@@ -30,7 +30,7 @@ function OrdersTable({orders}) {
                 <td>{order.estado}</td>
                 <td> {order.fechaEntrega}</td>
                 <td>{order.cliente}</td>
-                <td>{order.urlNotification}</td>
+                <td>{order.urlNotificacion}</td>
                 <td>{order.cantidad}</td>
                 <td>{order.sku}</td>
               </tr>

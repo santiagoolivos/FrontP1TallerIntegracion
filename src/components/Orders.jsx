@@ -15,17 +15,26 @@ function Orders() {
   const [rechazadas, setRechazadas] = useState(0);
   const [completadas, setCompletadas] = useState(0);
 
+  // Use Effect para actualizar estado 
+  useEffect(() => {
+    countOrders();
+  }, [orders]);
+
+
+  
+  
   const countOrders = () => {
     let recibidas_cant = 0;
     let aceptadas_cant = 0;
     let rechazadas_cant = 0;
     let completadas_cant = 0;
+
     const setInitialOrders = async () => {
       const ord = await getOrders();
-      console.log(ord);
       setOrders(ord)
       // setOrders(await getOrders())
     }
+
     setInitialOrders()
     orders.forEach(order => {
       if(order.estado === 'recibida') {
@@ -51,9 +60,9 @@ function Orders() {
         <Col>
         <h3>Estadísticas Ordenes:</h3>
         </Col>
-        <Col>
+        {/* <Col>
         <button type="button" class="btn btn-dark" onClick={countOrders}>Recalcular</button>
-        </Col>
+        </Col> */}
       </Row>
       <Table striped bordered hover variant="dark" >
           <thead>

@@ -15,6 +15,9 @@ const NavbarFrontend = () => {
             <li class="nav-item">
               <a class="nav-link" href="/ordenes">Ordenes</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/facturas">Facturas</a>
+            </li>
           </ul>
         </div>
       </div>
